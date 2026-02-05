@@ -7,6 +7,21 @@ body {
     align-items: center;
     height: 100vh;
     
+    
+}
+
+
+.container   {
+
+    margin: 5px;
+
+}
+.name-img {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -15,7 +30,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+      border: solid 5px rgb(9, 115, 255);
+    visibility:hidden;
+    padding: 5px;
+     border-radius: 5px;
+}
+
+.poke-stats {
+
+    display: flex;
+    visibility: hidden;
+    border: solid 3px rgb(9, 115, 255);
+    border-radius: 5px;
+  
 }
 
 
