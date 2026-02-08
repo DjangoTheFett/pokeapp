@@ -8,8 +8,21 @@
 </head>
 <body>
 
+   
+
+   <header class="header">
+      <h1><a class="" href="">Home</a></h1>  
+      <div class="links">
+         <h2><a href="">Compare</a></h2>
+         <h2><a href="">Battle</a></h2>
+      </div>
+   
+   </header>
+
+   <div class="content">
+
     <div id="container" class="container" >
-     <label>Choose that Pokemon!</label> <br>
+     <label class="title">Choose that Pokemon!</label> <br>
      <input id="pokemon" type="text" >
      <button id="search-btn">Search</button>
      
@@ -17,13 +30,25 @@
 
      <div class="poke-div" id="poke-div">
         <div class="name-img">
-        <p id="name"></p>
+        <p id="name" class="name"></p>
      <img id="img">
      </div>
      <div class="poke-stats" id="poke-stats">
         <p id="poke-hp"></p>
+        <p id="poke-att"></p>
+        <p id="poke-def"></p>
+        <p id="poke-specatt"></p>
+        <p id="poke-specdef"></p>
+        <p id="poke-speed"></p>
+        
      </div>
     </div>
+
+    </div>
+
+    <footer>Footy foot footer</footer>
+
+
      <script src="app.js" ></script>
 </body>
 </html>
