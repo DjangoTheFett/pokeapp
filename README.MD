@@ -1,7 +1,40 @@
-# pokeapp(name pending) an adventure in a website.
+# pokeQuest a search & battle adventure
 
-## The Plan
+ pokeQuest lets a user access the pokeAPI via a graphical user interface on the web.  
+ The web app displays the stats of these pokemon dynamically. 
+ This project is evolving into a text based adventure as I continue.
 
-Currently as I write this you are simply able to type in a pokemon name and fetch a name a picture and stats, but I plan to make this so much more than that.
 
-Pokeapp as im calling it for now is planned to be a text based adventure with some turn based battle mechanics built in. fight your way through a few areas battling trainers along the way. With nothing but your pokemon by your side can you make it to the end?
+## current features
+- Search for any pokemon by name
+- Fetch live data from pokeAPI
+- updating the DOM dynamically
+- displays a sprite ,  name, base stats
+- error handling for invalid inputs
+
+## tech Used
+- JavaScript
+- Fetch API
+- Async/await
+- REST APIs
+- HTML/CSS
+
+## planned features
+- text based battle adventure
+- pokemon comparison page
+- improved ui
+- save progress for battle adventure via local storage
+
+## What I Learned .. so far
+- Making API requests with fetch
+- Using async/await with real data
+- Updating the DOM dynamically
+- Structuring front-end code into reusable functions
+- Handling user input errors
+- Planning multi-page features
+
+
+
+## why I built this
+
+I am an early computer science student extremely interested in software development of all kinds. I am currently learning web development, this project came up as something I thought would help me learn alot including workign with REST API's and fetch and give me a chance to work with state as well as dynamically rendering data on a web page. 

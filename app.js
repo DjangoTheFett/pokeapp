@@ -16,6 +16,20 @@ const pokeDiv = document.getElementById("poke-div")
 
 
 
+let renderPokemon = function(data) {
+
+     pokemonName.innerHTML = data.name
+        imgContainer.src  = data.sprites.front_default
+        pokeHp.innerHTML = `HP: ${data.stats[0].base_stat}`
+        pokeAtt.innerHTML = `ATT: ${data.stats[1].base_stat}`
+        pokeDef.innerHTML = `DEF: ${data.stats[2].base_stat}`
+        pokeSpecAtt.innerHTML = `SPEC ATT: ${data.stats[3].base_stat}`
+        pokeSpecDef.innerHTML = `SPEC DEF: ${data.stats[4].base_stat}`
+        pokeSpeed.innerHTML = `SPEED: ${data.stats[5].base_stat}`
+        pokeStats.style.visibility = "visible"
+        pokeDiv.style.visibility = "visible"
+}
+
 
 searchButton.addEventListener("click", async function(event) {
 
@@ -36,16 +50,9 @@ searchButton.addEventListener("click", async function(event) {
         console.log(data)
         console.log(data.sprites.front_default)
 
-        pokemonName.innerHTML = data.name
-        imgContainer.src  = data.sprites.front_default
-        pokeHp.innerHTML = `HP: ${data.stats[0].base_stat}`
-        pokeAtt.innerHTML = `ATT: ${data.stats[1].base_stat}`
-        pokeDef.innerHTML = `DEF: ${data.stats[2].base_stat}`
-        pokeSpecAtt.innerHTML = `SPEC ATT: ${data.stats[3].base_stat}`
-        pokeSpecDef.innerHTML = `SPEC DEF: ${data.stats[4].base_stat}`
-        pokeSpeed.innerHTML = `SPEED: ${data.stats[5].base_stat}`
-        pokeStats.style.visibility = "visible"
-        pokeDiv.style.visibility = "visible"
+        renderPokemon(data);
+
+ 
 
        
         
