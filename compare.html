@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="compare.css">
     <title>Compare that Pokemon!</title>
 </head>
 <body>
@@ -18,11 +19,42 @@
    </header>
 
  
+    <div class="comp-content">
+    <div class="pokemon-1 pokemon" id="pokemon-1">
+      <div class="search" id="search-one">
+      <input type="text" id="comp-text-one">
+      <button class="comp-btn-one" id="comp-btn-one">Search</button>   
+      </div>
+
+      <div>
+         <img src="" alt="" id="poke-img-one">
+         <div id="stats-1" class="stats"></div>
+      </div>
+
+    </div>
+    <div class="pokemon-2">
+       <div class="search" id="search">
+      <input type="text" id="comp-text-two">
+      <button id="comp-btn-two">Search</button> 
+    </div>
+
+    <div class="comp-name"> 
+      <img src="" alt="" id="poke-img-two">
+      <p id="comp-name-two" ></p>
+    </div>
+
     <div>
-    <div class="poke-info-1"></div>
-    <div class="poke-info-2"></div>
+     
+      <div id="stats-2" class="stats"></div>
+    </div>
+
+    </div>
+
     </div>
 
       <footer>Footy foot footer</footer>
+      
+
+      <script src="app.js"></script>
 </body>
 </html>
