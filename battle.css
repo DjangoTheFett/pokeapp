@@ -1,0 +1,25 @@
+
+
+.battle-pokemon {
+  display: flex;
+    flex-direction: row;
+      border: solid 5px rgb(9, 115, 255);
+    visibility:hidden;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+     border-radius: 5px;
+     box-shadow: -1px 1px 20px 1px black;
+     text-decoration: underline;
+
+}
+
+
+
+
+.bottom-ui {
+  display: none;
+  align-items: flex-start;
+  width: 100%;
+}
+

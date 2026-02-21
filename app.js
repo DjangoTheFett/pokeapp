@@ -17,6 +17,17 @@ const compStatstwo = document.getElementById("stats-2")
 const compImgtwo = document.getElementById("poke-img-two")
 const compTexttwo = document.getElementById("comp-text-two")
 const compNameTwo = document.getElementById("comp-name-two")
+const battleSearchBtn = document.getElementById("battle-search-btn")
+const battleChoiceContainer = document.getElementById("battle-pokemon")
+const battleName = document.getElementById("battle-name")
+const battleStats = document.getElementById("battle-stats-container")
+const battleSearchInput = document.getElementById("battle-search-input")
+const battleImg = document.getElementById("battle-img")
+const compNameOne = document.getElementById("comp-name-one")
+
+
+
+
 
 
 
@@ -40,7 +51,7 @@ const apiCall = async function(text,stats,pContainer,pImg,nameContainer){
         console.log(data)
         
 
-         renderPokemonTest(data,stats,pContainer,pImg,compPokeone,nameContainer)
+         renderPokemon(data,stats,pContainer,pImg,compPokeone,nameContainer)
 
         
      
@@ -70,15 +81,10 @@ const apiCall = async function(text,stats,pContainer,pImg,nameContainer){
 
 
 
-if (searchButton) {
-searchButton.addEventListener("click", function () {
-    apiCall(textField,pokeStats,pokeDiv,imgContainer,pokemonName)
-})
-} 
 //--------------------------------------------------------------------------------------
 
 
-let renderPokemonTest = function(data,compStats,rContainer,pokeImg,name,nameContainer) {
+let renderPokemon = function(data,compStats,rContainer,pokeImg,name,nameContainer) {
 
     const statData = data.stats;
 
@@ -88,7 +94,7 @@ let renderPokemonTest = function(data,compStats,rContainer,pokeImg,name,nameCont
         for (let i = 0; i < statData.length; i++) {
             const paragraph = document.createElement("p")
 
-            paragraph.textContent = `${statData[i].stat.name}: ${statData[i].base_stat} `
+            paragraph.textContent = `${statData[i].base_stat} - ${statData[i].stat.name} `
 
             compStats.appendChild(paragraph)
             
@@ -106,15 +112,32 @@ let renderPokemonTest = function(data,compStats,rContainer,pokeImg,name,nameCont
 //----------------------------------------------------------------------------------------------------------------------------------
 
 
+
+
+if (searchButton) {
+searchButton.addEventListener("click", function () {
+    apiCall(textField,pokeStats,pokeDiv,imgContainer,pokemonName)
+})
+} 
     
 
 if(compBtnOne) {
 compBtnOne.addEventListener("click", function () {
 
-    apiCall(compTextOne,compStatsOne,compDivOne,compImgOne)
+    apiCall(compTextOne,compStatsOne,compDivOne,compImgOne,compNameOne)
 })}
 
 if(compBtntwo){
 compBtntwo.addEventListener("click", function() {
     apiCall(compTexttwo,compStatstwo,compDivtwo,compImgtwo,compNameTwo)
 })}
+
+if(battleSearchBtn) {
+
+    battleSearchBtn.addEventListener("click", function() {
+        apiCall(battleSearchInput,battleStats,battleChoiceContainer,battleImg,battleName)
+
+    }  )
+}
+
+
