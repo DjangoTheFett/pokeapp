@@ -2,7 +2,7 @@
 
  pokeQuest lets a user access the pokeAPI via a graphical user interface on the web.  
  The web app displays the stats of these pokemon dynamically. 
- This project is evolving into a text based adventure as I continue.
+
 
 
 ## current features
@@ -20,7 +20,6 @@
 - HTML/CSS
 
 ## planned features
-- text based battle adventure
 - pokemon comparison page
 - improved ui
 - save progress for battle adventure via local storage
